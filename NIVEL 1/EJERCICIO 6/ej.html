@@ -1,0 +1,32 @@
+<!-- Ejercicio 6
+Modificar el ejercicio anterior para incluir dos cuadros de texto en los que se puedan poner los
+valores para el ancho y alto de la imagen. Incluir también un botón para que cuando lo pulsemos
+se redimensione la imagen a los valores introducidos en los cuadros de texto. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    <div class="card">
+    <h1>Ejercicio 6</h1>
+
+<img id="miImagen" src="mifoto.png" alt="Imagen de ejemplo">
+
+        <div>
+            <label for="anchoInput">Ancho:</label>
+            <input type="number" id="anchoInput" value="100">
+
+            <label for="altoInput">Alto:</label>
+            <input type="number" id="altoInput" value="100">
+            
+            <button onclick="cambiarTamaño()">Redimensionar</button>
+        </div>
+    </div>    
+    <script src="tamaño.js"></script>
+</body>
+</html>

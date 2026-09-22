@@ -1,0 +1,38 @@
+<!-- Ejercicio 4
+Modificar el ejercicio anterior para que en lugar del alert con la función innerHTML se muestre en
+una tabla el contenido de cada cuadro de texto -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<style>
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px;
+        }
+    </style>
+
+<body>
+    <div class="card">
+    <h1>Ejercicio 4</h1>
+
+    <input type="text" id="numero1">
+    <input type="text" id="numero2">
+
+    <button id="botonSumar">Sumar</button>
+
+    <div id="contenedor-tabla"></div>
+
+    </div>
+    
+    <script src="suma.js"></script>
+</body>
+</html>
