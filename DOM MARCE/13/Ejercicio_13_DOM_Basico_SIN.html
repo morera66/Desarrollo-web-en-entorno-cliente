@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Ejercicio 13 - DOM básico y atributos XHTML</title>
+
+        <script type="text/javascript">
+            // al cargar la pagina se conecta el boton con la funcion anade
+            window.onload = function() {
+                document.getElementById("btAnade").onclick = anade;
+            }
+
+            // crea un li nuevo y lo añade al final de la lista
+            function anade() {
+                let lista = document.getElementById("lista");
+
+                // se crea el nodo del elemento <li>
+                let nuevo = document.createElement("li");
+
+                // se crea el nodo de texto, el numero es el que le toca segun los que ya hay
+                let numero = lista.getElementsByTagName("li").length + 1;
+                let texto = document.createTextNode("Nuevo elemento " + numero);
+
+                // se mete el texto dentro del li
+                nuevo.appendChild(texto);
+
+                // se mete el li dentro de la lista, y aparece en la pagina
+                lista.appendChild(nuevo);
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <ul id="lista">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetuer adipiscing elit</li>
+            <li>Sed mattis enim vitae orci</li>
+            <li>Phasellus libero</li>
+            <li>Maecenas nisl arcu</li>
+        </ul>
+
+        <input type="button" id="btAnade" value="Añadir elemento">
+
+    </body>
+</html>
